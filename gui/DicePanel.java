@@ -1,0 +1,38 @@
+package gui;
+
+import javax.swing.JPanel;
+import java.awt.Graphics;
+import mainCode.Game;
+import mainCode.Die;
+import java.util.Observer;
+import java.util.Observable;
+
+public class DicePanel extends JPanel implements Observer
+{
+   // properties
+   Game game;
+   Die die1;
+   Die die2;
+   
+   // constructors
+   public DicePanel( Game game )
+   {            
+      this.game = game;      
+      die1 = game.getDice().getDie1();
+      die2 = game.getDice().getDie2();
+      
+      game.addObserver( this );
+      
+      add( die1 );
+      add( die2 );
+      
+      setOpaque( false );
+      setVisible( false );
+   }
+   
+   // methods      
+   public void update( Observable obs, Object obj )
+   {                            
+      setVisible( game.getStage().equals( "moving pawn" ) );
+   }
+}
