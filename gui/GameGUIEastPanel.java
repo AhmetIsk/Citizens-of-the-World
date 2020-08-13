@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /*
  * GameGUIEastPanel class creates the components located in the Easthern part of GUIPanel
- * @author Burak Öçalan
+ * @author Burak Ã–Ã§alan
  * @version 12.05.2019
  */
 public class GameGUIEastPanel extends JPanel 
@@ -40,7 +40,7 @@ public class GameGUIEastPanel extends JPanel
    // methods
    
    /*
-    * creating the components of GameGuýEastPanel
+    * creating the components of GameGuÃ½EastPanel
     */
    public void createComponents()
    {
@@ -96,13 +96,13 @@ public class GameGUIEastPanel extends JPanel
       add( buttonPanel );
    }
    
-   //adding action listener for probable operations of GameGuýEastPanel
+   //adding action listener for probable operations of GameGuÃ½EastPanel
    public void handleActionListeners()
    {
       // Button Listeners for Player Infos and Leadership Table
       for( int n = 0; n < buttons.size(); n++ )
       {       
-         int m = n; 
+         final int m = n; 
          
          buttons.get( m ).addActionListener( new ActionListener() { 
             @Override
